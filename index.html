@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Prediksi Stunting</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplikasi Prediksi Stunting</h1>
+        </header>
+        <h2>Deteksi Dini untuk Tumbuh Kembang Optimal</h2>
+        <p>Masukkan data anak di bawah ini untuk memprediksi status gizi berdasarkan tinggi badan, berat badan, dan usia.</p>
+
+        <form id="stuntingPredictForm">
+            <div class="form-group">
+                <label for="childName">Nama Anak / Pengisi Form:</label>
+                <input type="text" id="childName" name="nama" placeholder="Contoh: Budi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ageMonths">Usia (Bulan):</label>
+                <input type="number" id="ageMonths" name="umur" min="0" max="60" required>
+            </div>
+            <div class="form-group">
+                <label for="heightCm">Tinggi Badan (cm):</label>
+                <input type="number" id="heightCm" name="tinggi_badan" step="0.1" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="weightKg">Berat Badan (kg):</label>
+                <input type="number" id="weightKg" name="berat_badan" step="0.1" min="0" required>
+            </div>
+            <button type="submit">Prediksi Status Gizi</button>
+        </form>
+
+        <div id="predictionResult" class="message" style="display: none;">
+            </div>
+
+        <p style="margin-top: 40px; text-align: center; font-size: 0.9em; color: #777;">
+            *Disclaimer: Aplikasi ini hanyalah alat bantu prediksi awal. Hasil tidak menggantikan diagnosa medis profesional. Selalu konsultasikan dengan dokter atau tenaga kesehatan untuk diagnosis dan penanganan lebih lanjut.
+        </p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
